@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(151, 12%, 65%);
+        }
+
+        header {
+            background-color: hsl(136, 28%, 92%);
+            padding: 7px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        #Recipe{
+            color: green;
+            font-size:45px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-toggle:checked~.nav {
+            display: block;
+        }
+
+        .menu-toggle-label {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            background-color: hsl(136, 28%, 92%);
+        }
+
+        .nav li {
+            margin-left: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            background-color: #62b458f2;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .recipe-card {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: hsl(136, 28%, 92%);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-card h2 {
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+
+        .recipe-card p {
+            margin: 10px;
+        }
+
+        .recipe-card button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .recipe-card button:hover {
+            background-color: #62b458f2;
+            transform: scale(1.04);
+        }
+
+        #searchbar{
+            position: relative;
+            left:1100px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .recipe-card {
+                width: 100%;
+            }
+
+            .nav {
+                display: none;
+                background-color: #153111f2;
+                border-top: 1px solid #ddd;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .nav li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .menu-toggle-label {
+                display: block;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20
+            }
+
+            .menu-toggle:checked+.menu-toggle-label:before {
+                content: "\f00d";
+            }
+            .nav ul li a{
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+       
+        <input type="checkbox" class="menu-toggle" id="menu-toggle">
+        <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+        <nav class="nav">
+            <ul>
+              <H1 id="Recipe">RECIPE</H1>
+               
+            </ul>
+            <span> <input id="searchbar" type="text" placeholder="Search recipe"></span>
+        </nav>
+    </header>
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <img src="foods/pizza1.webp" alt="Recipe 1">
+            <h2>Pizza</h2>
+            <p>Pizza is a popular Italian dish consisting of a flattened dough topped with tomato sauce, cheese, and
+                various toppings, and baked in an oven.</p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/chiken alfredo.jpg" alt="Recipe 2">
+            <h2>Chicken Alfredo</h2>
+            <p>Chicken Alfredo is a delicious pasta dish made with chicken, fettuccine, and a creamy Alfredo sauce.</p>
+            <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/chiken biriyani.jpg" alt="Recipe 3">
+            <h2>Chicken Biriyani</h2>
+            <p>Chicken biryani is a flavorful rice dish made with spiced chicken, fragrant rice, and aromatic spices.</p>
+            <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/chole bhature.jpg" alt="Recipe 4">
+            <h2>Chole Bhature</h2>
+            <p>Chole bhature is a popular North Indian dish made with spicy chickpeas (chole) and deep-fried bread
+                (bhature)</p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/burger.webp" alt="Recipe 5">
+            <h2>Veg Burger</h2>
+            <p>Veggie burger is a vegetarian alternative to traditional meat-based burgers, made with plant-based
+                ingredients and served on a bun.</p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/curd rice.jpg" alt="Recipe 6">
+            <h2>Curd Rice</h2>
+            <p>Curd rice is a South Indian dish made with cooked rice, yogurt, and tempered with spices, typically
+                served as a side dish. </p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/waffel.jpg" alt="Recipe 4">
+            <h2>Waffel</h2>
+            <p>Waffles are a breakfast food made with a batter that is cooked in a waffle iron, resulting in a crispy
+                and fluffy texture, often served with syrup and butter.</p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/soup.jpg" alt="Recipe 5">
+            <h2>soup</h2>
+            <p>
+                Soup is a savory liquid dish typically made by simmering vegetables, meat, or fish in a liquid base,
+                often served as a starter or main course. </p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/rasmali.jpg" alt="Recipe 6">
+            <h2>Rasmali</h2>
+            <p>Ras malai is a popular Indian dessert made with cheese balls (paneer) soaked in a sweet, creamy milk
+                sauce flavored with cardamom and saffron.
+
+            </p>
+            <a href="RMrecipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/ramen.jpg" alt="Recipe 4">
+            <h2>Ramen</h2>
+            <p>Ramen is a Japanese noodle soup dish made with wheat noodles, a savory broth, and various toppings such
+                as sliced pork, seaweed, and green onions.
+            </p>
+            <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/alu paratha.jpg" alt="Recipe 5">
+            <h2>Alu Paratha</h2>
+            <p>Aloo paratha is a popular Indian flatbread stuffed with spiced mashed potatoes and cooked on a griddle
+                with ghee or oil, often served with yogurt or pickle.</p>
+                <a href="recipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+        <div class="recipe-card">
+            <img src="foods/mushroom manchuri.jpg" alt="Recipe 6">
+            <h2>Mushroom Manchurian</h2>
+            <p>
+                Mushroom Manchurian is an Indo-Chinese dish made with deep-fried mushroom balls coated in a spicy, tangy
+                sauce, often served as an appetizer.</p>
+                <a href="MMrecipeningridient.html">
+            <button>View Recipe</button>
+        </a>
+        </div>
+    </div>
+    <script>
+        const toggle = document.querySelector(".menu-toggle ");
+        const nav = document.querySelector(".nav ");
+        toggle.addEventListener("change", function () {
+            nav.classList.toggle("active", this.checked);
+        });
+    </script>
+</body>
+
+</html>

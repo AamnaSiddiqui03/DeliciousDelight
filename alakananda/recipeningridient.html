@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+         
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: hsl(136, 28%, 92%);
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 36px;
+		}
+
+		main {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 18px;
+			margin-bottom: 5px;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0 0 0 20px;
+			list-style-type: disc;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+
+		ol {
+			margin: 0;
+			padding: 0 0 0 20px;
+			list-style-type: decimal;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+		}
+
+		.card {
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			box-shadow: 0 0 10px #ddd;
+			width: 300px;
+			margin: 20px;
+			transition: box-shadow 0.2s ease-in-out;
+		}
+
+		.card:hover {
+			box-shadow: 0 0 20px #aaa;
+		}
+
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+
+		.card h3 {
+			font-size: 20px;
+			margin: 10px;
+		}
+
+		.card p {
+			font-size: 16px;
+			margin: 10px;
+		}
+
+		.share-button {
+			display: inline-block;
+			background-color: hsl(136, 45%, 36%);
+			color: #fff;
+			font-size: 16px;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 20px 0;
+			cursor: pointer;
+		}
+
+		.share-button:hover {
+			background-color: hsl(137, 56%, 30%) ;
+		}
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<h1>Recipes</h1>
+	</header>
+	<main>
+		<h2>Pizza Recipe</h2>
+       
+		<button class="share-btn" onclick="share()">Share</button>
+		<p>Ingredients:</p>
+			<ul>
+				<li>Flour</li>
+				<li>Yeast</li>
+				<li>Cheese</li>
+				<li>Veggies</li>
+				<li>Seasonings and herbs</li>
+			</ul>
+		<p>Instructions:</p>
+        <ol>
+            <li>Make the pizza dough: In a large mixing bowl, combine flour, yeast, salt, sugar, and water. Mix until the dough forms a ball. Knead the dough for 5-10 minutes until it is smooth and elastic. Cover and let the dough rise for 30 minutes to 1 hour.</li>
+            
+            <li>Preheat the oven: Preheat your oven to 475°F (245°C).</li>
+            <li>Roll out the dough: Dust your work surface with flour and roll out the dough to the desired thickness and shape.</li>
+            <li>Add toppings: Spread tomato sauce on the dough and add your desired toppings, such as cheese, vegetables, and meats.</li>
+            <li>Bake the pizza: Place the pizza on a baking sheet or pizza stone and bake for 12-15 minutes or until the crust is golden brown and the cheese is melted and bubbly.</li>
+            <li>Slice and serve: Remove the pizza from the oven, slice it into pieces, and serve hot.</li>
+        </ol>
+</main>
+</body>
+</html>
